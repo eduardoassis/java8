@@ -3,10 +3,18 @@ interface Greeting {
 }
 
 public class GreetingTest {
-	
-	Greeting morning = (name) -> "Good morning " + name + "!";
-	Greeting evening = (name) -> "Good evening " + name + "!";
-	System.out.println(morning.processName("Eduardo"));
-	System.out.println(evening.processName("Ana"));
+
+	public static void main(String ... args) {
+
+		Greeting morning = (name) -> "Good morning " + name + "!";
+		Greeting evening = (name) -> "Good evening " + name + "!";
+
+		// Output: Good Morning Eduardo! 
+		System.out.println(morning.processName("Eduardo"));
+
+		// Output: Good Evening Ana!
+		System.out.println(evening.processName("Ana"));
+		
+	}	
 
 }
